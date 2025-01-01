@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\Prodi;
+use app\models\Akreditasi;
 
 /** @var yii\web\View $this */
 /** @var app\models\AkreditasiProdi $model */
@@ -12,19 +15,17 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_akreditasi')->textInput() ?>
+    <?= $form->field($model, 'prodi_id')->dropDownList(
+        ArrayHelper::map(Prodi::find()->all(), 'id', 'name'),
+        ['prompt' => 'Select Prodi']
+    ) ?>
 
-    <?= $form->field($model, 'id_prodi')->textInput() ?>
+    <?= $form->field($model, 'akreditasi_id')->dropDownList(
+        ArrayHelper::map(Akreditasi::find()->all(), 'id', 'name'),
+        ['prompt' => 'Select Akreditasi']
+    ) ?>
 
-    <?= $form->field($model, 'id_la')->textInput() ?>
-
-    <?= $form->field($model, 'tgl_mulai')->textInput() ?>
-
-    <?= $form->field($model, 'tgl_akhir')->textInput() ?>
-
-    <?= $form->field($model, 'no_sk')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'file')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'tahun')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\AkreditasiProdiSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Akreditasi Prodis';
+$this->title = 'Akreditasi Prodi';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="akreditasi-prodi-index">
