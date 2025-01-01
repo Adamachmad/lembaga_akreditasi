@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Universitas;
+use app\models\universitas;
 
 /**
- * UniversitasSearch represents the model behind the search form of `app\models\Universitas`.
+ * universitasSearch represents the model behind the search form of `app\models\universitas`.
  */
-class UniversitasSearch extends Universitas
+class universitasSearch extends universitas
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class UniversitasSearch extends Universitas
      */
     public function search($params)
     {
-        $query = Universitas::find();
+        $query = universitas::find();
 
         // add conditions that should always apply here
 
