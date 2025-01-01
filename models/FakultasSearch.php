@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Fakultas;
+use app\models\fakultas;
 
 /**
- * FakultasSearch represents the model behind the search form of `app\models\Fakultas`.
+ * fakultasSearch represents the model behind the search form of `app\models\fakultas`.
  */
-class FakultasSearch extends Fakultas
+class fakultasSearch extends fakultas
 {
     /**
      * {@inheritdoc}
@@ -40,7 +40,7 @@ class FakultasSearch extends Fakultas
      */
     public function search($params)
     {
-        $query = Fakultas::find();
+        $query = fakultas::find();
 
         // add conditions that should always apply here
 

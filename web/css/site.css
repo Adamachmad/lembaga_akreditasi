@@ -89,3 +89,71 @@ a.desc:after {
     color: #343a40;
     border-color: #ffc107;
 }
+body {
+    background-image: url('https://i.pinimg.com/originals/d4/e8/b9/d4e8b952e96794dabc90ccbb70409c3b.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* Jumbotron Section */
+.jumbotron {
+    background: linear-gradient(135deg, #FF6F61, #FFBC42); /* Gradasi warna */
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lembut */
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.display-4 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-warning {
+    background-color: #ff8c00;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #ffa500;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-lg {
+    font-size: 1.3rem;
+    padding: 15px 35px;
+}
+
+.body-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .btn-lg {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}

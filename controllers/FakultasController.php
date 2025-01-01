@@ -2,14 +2,14 @@
 
 namespace app\controllers;
 
-use app\models\Fakultas;
-use app\models\FakultasSearch;
+use app\models\fakultas;
+use app\models\fakultasSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * FakultasController implements the CRUD actions for Fakultas model.
+ * FakultasController implements the CRUD actions for fakultas model.
  */
 class FakultasController extends Controller
 {
@@ -32,13 +32,13 @@ class FakultasController extends Controller
     }
 
     /**
-     * Lists all Fakultas models.
+     * Lists all fakultas models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new FakultasSearch();
+        $searchModel = new fakultasSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class FakultasController extends Controller
     }
 
     /**
-     * Displays a single Fakultas model.
+     * Displays a single fakultas model.
      * @param int $id_fakultas Id Fakultas
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class FakultasController extends Controller
     }
 
     /**
-     * Creates a new Fakultas model.
+     * Creates a new fakultas model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new Fakultas();
+        $model = new fakultas();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class FakultasController extends Controller
     }
 
     /**
-     * Updates an existing Fakultas model.
+     * Updates an existing fakultas model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id_fakultas Id Fakultas
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class FakultasController extends Controller
     }
 
     /**
-     * Deletes an existing Fakultas model.
+     * Deletes an existing fakultas model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id_fakultas Id Fakultas
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class FakultasController extends Controller
     }
 
     /**
-     * Finds the Fakultas model based on its primary key value.
+     * Finds the fakultas model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id_fakultas Id Fakultas
-     * @return Fakultas the loaded model
+     * @return fakultas the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id_fakultas)
     {
-        if (($model = Fakultas::findOne(['id_fakultas' => $id_fakultas])) !== null) {
+        if (($model = fakultas::findOne(['id_fakultas' => $id_fakultas])) !== null) {
             return $model;
         }
 

@@ -12,7 +12,7 @@ use Yii;
  * @property string|null $nama_fakultas
  *
  * @property Prodi[] $prodis
- * @property Univertas $universitas
+ * @property Universitas $universitas
  */
 class Fakultas extends \yii\db\ActiveRecord
 {
@@ -35,7 +35,7 @@ class Fakultas extends \yii\db\ActiveRecord
             [['nama_fakultas'], 'string', 'max' => 100],
             [['nama_fakultas'], 'unique'],
             [['id_fakultas'], 'unique'],
-            [['id_universitas'], 'exist', 'skipOnError' => true, 'targetClass' => Univertas::class, 'targetAttribute' => ['id_universitas' => 'id_universitas']],
+            [['id_universitas'], 'exist', 'skipOnError' => true, 'targetClass' => Universitas::class, 'targetAttribute' => ['id_universitas' => 'id_universitas']],
         ];
     }
 
@@ -68,6 +68,6 @@ class Fakultas extends \yii\db\ActiveRecord
      */
     public function getUniversitas()
     {
-        return $this->hasOne(Univertas::class, ['id_universitas' => 'id_universitas']);
+        return $this->hasOne(Universitas::class, ['id_universitas' => 'id_universitas']);
     }
 }

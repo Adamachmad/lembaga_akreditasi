@@ -1,13 +1,13 @@
 <?php
 
-use app\models\Fakultas;
+use app\models\fakultas;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\FakultasSearch $searchModel */
+/** @var app\models\fakultasSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Fakultas';
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nama_fakultas',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Fakultas $model, $key, $index, $column) {
+                'urlCreator' => function ($action, fakultas $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id_fakultas' => $model->id_fakultas]);
                  }
             ],
