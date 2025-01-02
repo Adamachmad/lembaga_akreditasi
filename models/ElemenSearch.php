@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\elemen;
+use app\models\Elemen;
 
 /**
- * elemenSearch represents the model behind the search form of `app\models\elemen`.
+ * ElemenSearch represents the model behind the search form of `app\models\Elemen`.
  */
-class elemenSearch extends elemen
+class ElemenSearch extends Elemen
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class elemenSearch extends elemen
     {
         return [
             [['id_elemen'], 'integer'],
-            [['nama_elemen', 'deskripsi'], 'safe'],
+            [['nama_elemen'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class elemenSearch extends elemen
      */
     public function search($params)
     {
-        $query = elemen::find();
+        $query = Elemen::find();
 
         // add conditions that should always apply here
 
@@ -61,8 +61,7 @@ class elemenSearch extends elemen
             'id_elemen' => $this->id_elemen,
         ]);
 
-        $query->andFilterWhere(['like', 'nama_elemen', $this->nama_elemen])
-            ->andFilterWhere(['like', 'deskripsi', $this->deskripsi]);
+        $query->andFilterWhere(['like', 'nama_elemen', $this->nama_elemen]);
 
         return $dataProvider;
     }

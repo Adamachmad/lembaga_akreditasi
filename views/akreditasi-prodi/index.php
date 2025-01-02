@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\AkreditasiProdiSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Akreditasi Prodi';
+$this->title = 'Akreditasi Prodis';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="akreditasi-prodi-index">
@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'tgl_mulai',
             'tgl_akhir',
             //'no_sk',
-            //'file',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, AkreditasiProdi $model, $key, $index, $column) {

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\indikatorSearch $model */
+/** @var app\models\IndikatorSearch $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -20,8 +20,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_elemen') ?>
 
     <?= $form->field($model, 'nama_indikator') ?>
-
-    <?= $form->field($model, 'no_urut') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

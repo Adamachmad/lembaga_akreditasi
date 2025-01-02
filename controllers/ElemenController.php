@@ -3,7 +3,7 @@
 namespace app\controllers;
 
 use app\models\Elemen;
-use app\models\ElemenProdiSearch;
+use app\models\ElemenSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -38,7 +38,7 @@ class ElemenController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ElemenProdiSearch();
+        $searchModel = new ElemenSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [

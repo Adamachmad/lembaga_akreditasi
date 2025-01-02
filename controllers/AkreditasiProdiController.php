@@ -9,9 +9,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AkreditasiprodiController implements the CRUD actions for AkreditasiProdi model.
+ * AkreditasiProdiController implements the CRUD actions for AkreditasiProdi model.
  */
-class AkreditasiprodiController extends Controller
+class AkreditasiProdiController extends Controller
 {
     /**
      * @inheritDoc

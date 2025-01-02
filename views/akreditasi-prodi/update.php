@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\models\AkreditasiProdi $model */
 
 $this->title = 'Update Akreditasi Prodi: ' . $model->id_akreditasi;
-$this->params['breadcrumbs'][] = ['label' => 'Akreditasi Prodis', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Akreditasi Prodi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id_akreditasi, 'url' => ['view', 'id_akreditasi' => $model->id_akreditasi]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

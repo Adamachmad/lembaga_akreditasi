@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-/** @var app\models\indikator $model */
+/** @var app\models\Indikator $model */
 
 $this->title = 'Update Indikator: ' . $model->id_indikator;
 $this->params['breadcrumbs'][] = ['label' => 'Indikators', 'url' => ['index']];

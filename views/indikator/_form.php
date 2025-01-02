@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\indikator $model */
+/** @var app\models\Indikator $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -17,8 +17,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_elemen')->textInput() ?>
 
     <?= $form->field($model, 'nama_indikator')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'no_urut')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

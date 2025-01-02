@@ -24,6 +24,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="<?= Yii::getAlias('@web/css/site.css') ?>" rel="stylesheet">
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
@@ -41,8 +42,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ['label' => 'Prodi', 'url' => ['/prodi/index']],
             ['label' => 'Fakultas', 'url' => ['/fakultas/index']],
             ['label' => 'Universitas', 'url' => ['/universitas/index']],
-            ['label' => 'Akreditasi Prodi', 'url' => ['/akreditasiprodi/index']],
+            ['label' => 'Akreditasi Prodi', 'url' => ['/akreditasi-prodi/index']],
             ['label' => 'Lembaga Akreditas', 'url' => ['/lembagaakreditas/index']],
+            ['label' => 'Elemen', 'url' => ['/elemen/index']],
             ['label' => 'Indikator', 'url' => ['/indikator/index']],
             ['label' => 'Penilaian Prodi', 'url' => ['/penilaianprodi/index']],
         ],
@@ -60,7 +62,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 </main>
 
 <footer class="footer mt-auto py-3 bg-dark text-white">
-    <div class="container">
+    <div class="container-sm">
         <span class="text-muted">&copy; My Company <?= date('Y') ?></span>
         <span class="float-end"><a href="#">Privacy</a> | <a href="#">Terms</a></span>
     </div>

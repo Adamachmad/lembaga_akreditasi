@@ -1,13 +1,13 @@
 <?php
 
-use app\models\indikator;
+use app\models\Indikator;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\indikatorSearch $searchModel */
+/** @var app\models\IndikatorSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Indikators';
@@ -32,10 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_indikator',
             'id_elemen',
             'nama_indikator',
-            'no_urut',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, indikator $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Indikator $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id_indikator' => $model->id_indikator]);
                  }
             ],

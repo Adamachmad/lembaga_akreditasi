@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'tgl_mulai',
             'tgl_akhir',
             'no_sk',
-            'file',
         ],
     ]) ?>
 

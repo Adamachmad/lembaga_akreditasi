@@ -1,4 +1,3 @@
-di/create.php
 <?php
 
 use yii\helpers\Html;

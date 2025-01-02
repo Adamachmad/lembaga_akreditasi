@@ -1,13 +1,13 @@
 <?php
 
-use app\models\elemen;
+use app\models\Elemen;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 
 /** @var yii\web\View $this */
-/** @var app\models\elemenSearch $searchModel */
+/** @var app\models\ElemenSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = 'Elemens';
@@ -31,10 +31,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id_elemen',
             'nama_elemen',
-            'deskripsi:ntext',
             [
                 'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, elemen $model, $key, $index, $column) {
+                'urlCreator' => function ($action, Elemen $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id_elemen' => $model->id_elemen]);
                  }
             ],

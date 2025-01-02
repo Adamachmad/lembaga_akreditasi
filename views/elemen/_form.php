@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\elemen $model */
+/** @var app\models\Elemen $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -15,8 +15,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_elemen')->textInput() ?>
 
     <?= $form->field($model, 'nama_elemen')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'deskripsi')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

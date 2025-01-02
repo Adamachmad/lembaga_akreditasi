@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\models\elemen $model */
+/** @var app\models\Elemen $model */
 
 $this->title = $model->id_elemen;
 $this->params['breadcrumbs'][] = ['label' => 'Elemens', 'url' => ['index']];
@@ -31,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id_elemen',
             'nama_elemen',
-            'deskripsi:ntext',
         ],
     ]) ?>
 

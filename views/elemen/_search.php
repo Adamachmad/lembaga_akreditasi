@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var app\models\elemenSearch $model */
+/** @var app\models\ElemenSearch $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
@@ -18,8 +18,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'id_elemen') ?>
 
     <?= $form->field($model, 'nama_elemen') ?>
-
-    <?= $form->field($model, 'deskripsi') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
