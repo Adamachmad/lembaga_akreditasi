@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\AkreditasiProdi;
+use app\models\Elemen;
 
 /**
- * AkreditasiProdiSearch represents the model behind the search form of `app\models\AkreditasiProdi`.
+ * ElemenProdiSearch represents the model behind the search form of `app\models\Elemen`.
  */
-class AkreditasiProdiSearch extends AkreditasiProdi
+class ElemenProdiSearch extends Elemen
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class AkreditasiProdiSearch extends AkreditasiProdi
     public function rules()
     {
         return [
-            [['id_akreditasi', 'id_prodi', 'id_la'], 'integer'],
-            [['tgl_mulai', 'tgl_akhir', 'no_sk'], 'safe'],
+            [['id_elemen'], 'integer'],
+            [['nama_elemen'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class AkreditasiProdiSearch extends AkreditasiProdi
      */
     public function search($params)
     {
-        $query = AkreditasiProdi::find();
+        $query = Elemen::find();
 
         // add conditions that should always apply here
 
@@ -58,14 +58,10 @@ class AkreditasiProdiSearch extends AkreditasiProdi
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id_akreditasi' => $this->id_akreditasi,
-            'id_prodi' => $this->id_prodi,
-            'id_la' => $this->id_la,
-            'tgl_mulai' => $this->tgl_mulai,
-            'tgl_akhir' => $this->tgl_akhir,
+            'id_elemen' => $this->id_elemen,
         ]);
 
-        $query->andFilterWhere(['like', 'no_sk', $this->no_sk]);
+        $query->andFilterWhere(['like', 'nama_elemen', $this->nama_elemen]);
 
         return $dataProvider;
     }

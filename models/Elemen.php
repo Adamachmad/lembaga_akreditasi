@@ -9,7 +9,6 @@ use Yii;
  *
  * @property int $id_elemen
  * @property string|null $nama_elemen
- * @property string|null $deskripsi
  *
  * @property Indikator[] $indikators
  */
@@ -31,7 +30,6 @@ class Elemen extends \yii\db\ActiveRecord
         return [
             [['id_elemen'], 'required'],
             [['id_elemen'], 'integer'],
-            [['deskripsi'], 'string'],
             [['nama_elemen'], 'string', 'max' => 100],
             [['id_elemen'], 'unique'],
         ];
@@ -45,7 +43,6 @@ class Elemen extends \yii\db\ActiveRecord
         return [
             'id_elemen' => 'Id Elemen',
             'nama_elemen' => 'Nama Elemen',
-            'deskripsi' => 'Deskripsi',
         ];
     }
 

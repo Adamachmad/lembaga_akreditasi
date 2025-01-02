@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\indikator;
+use app\models\Indikator;
 
 /**
- * indikatorSearch represents the model behind the search form of `app\models\indikator`.
+ * IndikatorSearch represents the model behind the search form of `app\models\Indikator`.
  */
-class indikatorSearch extends indikator
+class IndikatorSearch extends Indikator
 {
     /**
      * {@inheritdoc}
@@ -17,7 +17,7 @@ class indikatorSearch extends indikator
     public function rules()
     {
         return [
-            [['id_indikator', 'id_elemen', 'no_urut'], 'integer'],
+            [['id_indikator', 'id_elemen'], 'integer'],
             [['nama_indikator'], 'safe'],
         ];
     }
@@ -40,7 +40,7 @@ class indikatorSearch extends indikator
      */
     public function search($params)
     {
-        $query = indikator::find();
+        $query = Indikator::find();
 
         // add conditions that should always apply here
 
@@ -60,7 +60,6 @@ class indikatorSearch extends indikator
         $query->andFilterWhere([
             'id_indikator' => $this->id_indikator,
             'id_elemen' => $this->id_elemen,
-            'no_urut' => $this->no_urut,
         ]);
 
         $query->andFilterWhere(['like', 'nama_indikator', $this->nama_indikator]);

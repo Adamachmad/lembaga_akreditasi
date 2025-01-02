@@ -2,14 +2,14 @@
 
 namespace app\controllers;
 
-use app\models\indikator;
-use app\models\indikatorSearch;
+use app\models\Indikator;
+use app\models\IndikatorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * IndikatorController implements the CRUD actions for indikator model.
+ * IndikatorController implements the CRUD actions for Indikator model.
  */
 class IndikatorController extends Controller
 {
@@ -32,13 +32,13 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Lists all indikator models.
+     * Lists all Indikator models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new indikatorSearch();
+        $searchModel = new IndikatorSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Displays a single indikator model.
+     * Displays a single Indikator model.
      * @param int $id_indikator Id Indikator
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Creates a new indikator model.
+     * Creates a new Indikator model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new indikator();
+        $model = new Indikator();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Updates an existing indikator model.
+     * Updates an existing Indikator model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id_indikator Id Indikator
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Deletes an existing indikator model.
+     * Deletes an existing Indikator model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id_indikator Id Indikator
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class IndikatorController extends Controller
     }
 
     /**
-     * Finds the indikator model based on its primary key value.
+     * Finds the Indikator model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id_indikator Id Indikator
-     * @return indikator the loaded model
+     * @return Indikator the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id_indikator)
     {
-        if (($model = indikator::findOne(['id_indikator' => $id_indikator])) !== null) {
+        if (($model = Indikator::findOne(['id_indikator' => $id_indikator])) !== null) {
             return $model;
         }
 

@@ -2,14 +2,14 @@
 
 namespace app\controllers;
 
-use app\models\elemen;
-use app\models\elemenSearch;
+use app\models\Elemen;
+use app\models\ElemenProdiSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ElemenController implements the CRUD actions for elemen model.
+ * ElemenController implements the CRUD actions for Elemen model.
  */
 class ElemenController extends Controller
 {
@@ -32,13 +32,13 @@ class ElemenController extends Controller
     }
 
     /**
-     * Lists all elemen models.
+     * Lists all Elemen models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        $searchModel = new elemenSearch();
+        $searchModel = new ElemenProdiSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class ElemenController extends Controller
     }
 
     /**
-     * Displays a single elemen model.
+     * Displays a single Elemen model.
      * @param int $id_elemen Id Elemen
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
@@ -61,13 +61,13 @@ class ElemenController extends Controller
     }
 
     /**
-     * Creates a new elemen model.
+     * Creates a new Elemen model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new elemen();
+        $model = new Elemen();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
@@ -83,7 +83,7 @@ class ElemenController extends Controller
     }
 
     /**
-     * Updates an existing elemen model.
+     * Updates an existing Elemen model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param int $id_elemen Id Elemen
      * @return string|\yii\web\Response
@@ -103,7 +103,7 @@ class ElemenController extends Controller
     }
 
     /**
-     * Deletes an existing elemen model.
+     * Deletes an existing Elemen model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param int $id_elemen Id Elemen
      * @return \yii\web\Response
@@ -117,15 +117,15 @@ class ElemenController extends Controller
     }
 
     /**
-     * Finds the elemen model based on its primary key value.
+     * Finds the Elemen model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param int $id_elemen Id Elemen
-     * @return elemen the loaded model
+     * @return Elemen the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id_elemen)
     {
-        if (($model = elemen::findOne(['id_elemen' => $id_elemen])) !== null) {
+        if (($model = Elemen::findOne(['id_elemen' => $id_elemen])) !== null) {
             return $model;
         }
 

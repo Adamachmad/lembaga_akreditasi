@@ -10,7 +10,6 @@ use Yii;
  * @property int $id_indikator
  * @property int $id_elemen
  * @property string|null $nama_indikator
- * @property int|null $no_urut
  *
  * @property Elemen $elemen
  * @property PenilaianProdi[] $penilaianProdis
@@ -32,7 +31,7 @@ class Indikator extends \yii\db\ActiveRecord
     {
         return [
             [['id_indikator', 'id_elemen'], 'required'],
-            [['id_indikator', 'id_elemen', 'no_urut'], 'integer'],
+            [['id_indikator', 'id_elemen'], 'integer'],
             [['nama_indikator'], 'string', 'max' => 250],
             [['id_indikator'], 'unique'],
             [['id_elemen'], 'exist', 'skipOnError' => true, 'targetClass' => Elemen::class, 'targetAttribute' => ['id_elemen' => 'id_elemen']],
@@ -48,7 +47,6 @@ class Indikator extends \yii\db\ActiveRecord
             'id_indikator' => 'Id Indikator',
             'id_elemen' => 'Id Elemen',
             'nama_indikator' => 'Nama Indikator',
-            'no_urut' => 'No Urut',
         ];
     }
 

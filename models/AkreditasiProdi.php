@@ -13,7 +13,6 @@ use Yii;
  * @property string|null $tgl_mulai
  * @property string|null $tgl_akhir
  * @property string|null $no_sk
- * @property string|null $file
  *
  * @property LembagaAkreditas $la
  * @property Prodi $prodi
@@ -38,8 +37,6 @@ class AkreditasiProdi extends \yii\db\ActiveRecord
             [['id_akreditasi', 'id_prodi', 'id_la'], 'integer'],
             [['tgl_mulai', 'tgl_akhir'], 'safe'],
             [['no_sk'], 'string', 'max' => 100],
-            [['file'], 'string', 'max' => 200],
-            [['file'], 'unique'],
             [['id_akreditasi'], 'unique'],
             [['id_la'], 'exist', 'skipOnError' => true, 'targetClass' => LembagaAkreditas::class, 'targetAttribute' => ['id_la' => 'id_la']],
             [['id_prodi'], 'exist', 'skipOnError' => true, 'targetClass' => Prodi::class, 'targetAttribute' => ['id_prodi' => 'id_prodi']],
@@ -58,7 +55,6 @@ class AkreditasiProdi extends \yii\db\ActiveRecord
             'tgl_mulai' => 'Tgl Mulai',
             'tgl_akhir' => 'Tgl Akhir',
             'no_sk' => 'No Sk',
-            'file' => 'File',
         ];
     }
 
